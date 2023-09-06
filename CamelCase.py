@@ -9,10 +9,12 @@ Assuming _ and - are NOT accepted
 """
 
 import re
+from tarfile import data_filter
 
 # Define a main function to run the core code
 def main():
     display_banner()
+    display_instructions()
     # Utilize builtin input to store the variable name for validating
     variable = input(f'Please enter a variable name for validation and formatting: ')
 
@@ -66,7 +68,15 @@ def display_banner():
     """ Display program name in banner """
     msg = 'AWSOME camelCaseGenerator PROGRAM'
     stars = '*' * len(msg)
-    print(f'\n {stars} \n {msg} \n {stars}\n')
+    print(f'\n {stars} \n {msg} \n {stars}')
+
+
+def display_instructions():
+    """ Display program instructions after banner """
+    instruction = 'Please enter a sentence without special characters! Do not start the sentence with a number.'
+    dashes = '-' * len(instruction)
+    print(f' {dashes} \n {instruction} \n {dashes}\n')
+
 
 # Run the main program
 main()
