@@ -12,6 +12,7 @@ import re
 
 # Define a main function to run the core code
 def main():
+    display_banner()
     # Utilize builtin input to store the variable name for validating
     variable = input(f'Please enter a variable name for validation and formatting: ')
 
@@ -60,6 +61,12 @@ def testVariable(userInput):
 
     # Return the matches or "None" Types
     return numExists, specCharExists
+
+def display_banner():
+    """ Display program name in banner """
+    msg = 'AWSOME camelCaseGenerator PROGRAM'
+    stars = '*' * len(msg)
+    print(f'\n {stars} \n {msg} \n {stars}\n')
 
 # Run the main program
 main()
